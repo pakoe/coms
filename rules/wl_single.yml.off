@@ -1,0 +1,15 @@
+id: 1
+process: "wltask_single"
+match:
+  - :a :
+    - [ "engine   > activity     > calling   > endpoint"                      , "==", "http://coms.wst.univie.ac.at:9300"]
+    - [ "engine   > activity     > calling   > parameters  > arguments > form", "==", "http://coms.wst.univie.ac.at/form/form-a.html"]
+  - :b :
+    - [ "engine   > activity     > calling   > endpoint"                      , "==", "http://coms.wst.univie.ac.at:9300"]
+    - [ "engine   > activity     > calling   > parameters  > arguments > form", "==", "http://coms.wst.univie.ac.at/form/form-f.html"]
+condition:
+  - [ "a > engine   > activity     > receiving > received > 4 > schadenssumme"             , "<=",     "900"]
+  - [ "b > worklist > user         > take      > user"                                     , "==",     "a > worklist > user         > take      > user" ]
+  - [ "a > engine   > activity     > calling   > time"                                     , "before", "b > engine   > activity     > calling   > time"]
+if:    [] #was wenn
+ifnot: [cpee_stop] #was wenn nicht

@@ -1,0 +1,21 @@
+id: 1
+process: "wltask"
+match:
+  - :a :
+    - [ "engine   > activity     > calling   > endpoint"                      , "==", "http://coms.wst.univie.ac.at:9300"]
+    - [ "engine   > activity     > calling   > parameters  > arguments > form", "==", "http://coms.wst.univie.ac.at/form/form-a.html"]
+  - :b :
+    - [ "engine   > activity     > calling   > endpoint"                      , "==", "http://coms.wst.univie.ac.at:9300"]
+    - [ "engine   > activity     > calling   > parameters  > arguments > form", "==", "http://coms.wst.univie.ac.at/form/form-f.html"]
+condition:
+  - [ "a > engine   > activity     > receiving > received > 4 > schadenssumme"             , "<=", 900]
+  - [ "a > worklist > user         > take      > user"                                     , "==", "weissh9"]
+  - [ "b > engine   > activity     > calling   > parameters   > arguments > role"          , "==", "Regular" ]
+  - [ "b > worklist > user         > take      > organisation > * > +"                     , "include?", "b > engine   > activity     > calling   > parameters   > arguments > role"]
+  - [ "b > worklist > user         > take      > user"                                     , "==", "weissh9" ]
+# - [ "instance name", "instance", 3]
+if:    [] #was wenn
+ifnot: [cpee_stop, worklist_delete_task] #was wenn nicht
+
+#conditions are only applied when the match matches
+# isc when evaluation only when pattern matches? ISC's total useless unless for last task

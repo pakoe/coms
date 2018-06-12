@@ -1,0 +1,1060 @@
+---
+:data:
+  90052c58-b838-48ae-9a03-a7fd94d88555:
+    :a1:
+      :robot:
+        :activity:
+          :receiving:
+            instance: https://centurio.work/flow/engine/376
+            label: Fetch
+            instance_name: 3D Drucker Seite
+            instance_uuid: 90052c58-b838-48ae-9a03-a7fd94d88555
+            activity: a1
+            endpoint: https://centurio.work/data/mm500/queue/ee2afd67-4eaa-4b78-a50e-76fee7c8b48b/push
+            received:
+            - message:
+                mimetype: application/json
+                content:
+                - ID: ns=2;s=/Channel/ProgramInfo/actBlock
+                  source: opcua
+                  name: Program/actBlock
+                  description: Current part program block.
+                  path: "/Object/Sinumerik/Channel/ProgramInfo/actBlock"
+                  value: "N475 X-7.828 Z-5.44\r"
+                  timestamp: '2018-06-12 13:18:50.536000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.635200'
+                    VariantType: VariantType.String
+                    ClientHandle: '212'
+                - ID: ns=2;s=/Channel/MachineAxis/aaTorque[u1,1]
+                  source: opcua
+                  name: Axis/X/aaTorque
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaTorque[u1,1]"
+                  value: 1.873
+                  timestamp: '2018-06-12 13:18:50.536000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.635200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '223'
+                - ID: ns=2;s=/Channel/MachineAxis/aaTorque[u1,2]
+                  source: opcua
+                  name: Axis/Y/aaTorque
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaTorque[u1,2]"
+                  value: 0.152
+                  timestamp: '2018-06-12 13:18:50.536000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.635200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '224'
+                - ID: ns=2;s=/Channel/MachineAxis/aaTorque[u1,3]
+                  source: opcua
+                  name: Axis/Z/aaTorque
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaTorque[u1,3]"
+                  value: 4.347
+                  timestamp: '2018-06-12 13:18:50.536000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.635200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '225'
+                - ID: ns=2;s=/Channel/MachineAxis/aaVactB[u1,3]
+                  source: opcua
+                  name: Axis/Z/aaVactB
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaVactB[u1,3]"
+                  value: -57.65360119305777
+                  timestamp: '2018-06-12 13:18:50.536000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.635200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '228'
+                - ID: ns=2;s=/Channel/MachineAxis/aaLoad[u1,1]
+                  source: opcua
+                  name: Axis/X/aaLoad
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaLoad[u1,1]"
+                  value: 12.042236328125
+                  timestamp: '2018-06-12 13:18:50.536000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.635200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '232'
+                - ID: ns=2;s=/Channel/MachineAxis/aaLoad[u1,2]
+                  source: opcua
+                  name: Axis/Y/aaLoad
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaLoad[u1,2]"
+                  value: 1.3427734375
+                  timestamp: '2018-06-12 13:18:50.536000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.635200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '233'
+                - ID: ns=2;s=/Channel/MachineAxis/aaLoad[u1,3]
+                  source: opcua
+                  name: Axis/Z/aaLoad
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaLoad[u1,3]"
+                  value: 4.99267578125
+                  timestamp: '2018-06-12 13:18:50.536000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.635200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '234'
+                - ID: ns=2;s=/Channel/MachineAxis/aaVactB[u1,1]
+                  source: opcua
+                  name: Axis/X/aaVactB
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaVactB[u1,1]"
+                  value: -769.5039173611406
+                  timestamp: '2018-06-12 13:18:50.536000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.635200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '226'
+                - ID: ns=2;s=/Channel/Spindle/driveLoad
+                  source: opcua
+                  name: Spindle/driveLoad
+                  description: Load
+                  path: "/Object/Sinumerik/Channel/Spindle/driveLoad"
+                  value: 3.47900390625
+                  timestamp: '2018-06-12 13:18:50.736000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.752200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '217'
+                - ID: ns=2;s=/Channel/MachineAxis/aaLeadP[u1,1]
+                  source: opcua
+                  name: Axis/X/aaLeadP
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaLeadP[u1,1]"
+                  value: 83.06229272234971
+                  timestamp: '2018-06-12 13:18:50.736000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.752200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '220'
+                - ID: ns=2;s=/Channel/MachineAxis/aaLeadP[u1,3]
+                  source: opcua
+                  name: Axis/Z/aaLeadP
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaLeadP[u1,3]"
+                  value: 377.11746661335235
+                  timestamp: '2018-06-12 13:18:50.736000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.752200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '222'
+                - ID: ns=2;s=/Channel/MachineAxis/aaTorque[u1,1]
+                  source: opcua
+                  name: Axis/X/aaTorque
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaTorque[u1,1]"
+                  value: 1.0230000000000001
+                  timestamp: '2018-06-12 13:18:50.736000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.752200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '223'
+                - ID: ns=2;s=/Channel/MachineAxis/aaTorque[u1,2]
+                  source: opcua
+                  name: Axis/Y/aaTorque
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaTorque[u1,2]"
+                  value: 0.426
+                  timestamp: '2018-06-12 13:18:50.736000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.752200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '224'
+                - ID: ns=2;s=/Channel/Spindle/actSpeed
+                  source: opcua
+                  name: Spindle/actSpeed
+                  description: Spindle speed actual value
+                  path: "/Object/Sinumerik/Channel/Spindle/actSpeed"
+                  value: 12732.524871826172
+                  timestamp: '2018-06-12 13:18:50.736000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.752200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '215'
+                - ID: ns=2;s=/Channel/MachineAxis/aaTorque[u1,3]
+                  source: opcua
+                  name: Axis/Z/aaTorque
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaTorque[u1,3]"
+                  value: 4.296
+                  timestamp: '2018-06-12 13:18:50.736000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.752200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '225'
+                - ID: ns=2;s=/Channel/MachineAxis/aaVactB[u1,1]
+                  source: opcua
+                  name: Axis/X/aaVactB
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaVactB[u1,1]"
+                  value: -797.764022317412
+                  timestamp: '2018-06-12 13:18:50.637000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.751200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '226'
+                - ID: ns=2;s=/Channel/MachineAxis/aaVactB[u1,3]
+                  source: opcua
+                  name: Axis/Z/aaVactB
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaVactB[u1,3]"
+                  value: -59.77093521055072
+                  timestamp: '2018-06-12 13:18:50.637000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.751200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '228'
+                - ID: ns=2;s=/Channel/MachineAxis/aaLoad[u1,1]
+                  source: opcua
+                  name: Axis/X/aaLoad
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaLoad[u1,1]"
+                  value: 6.7626953125
+                  timestamp: '2018-06-12 13:18:50.736000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.751200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '232'
+                - ID: ns=2;s=/Channel/MachineAxis/aaLoad[u1,2]
+                  source: opcua
+                  name: Axis/Y/aaLoad
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaLoad[u1,2]"
+                  value: 2.825927734375
+                  timestamp: '2018-06-12 13:18:50.736000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.751200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '233'
+                - ID: ns=2;s=/Channel/MachineAxis/aaLoad[u1,3]
+                  source: opcua
+                  name: Axis/Z/aaLoad
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaLoad[u1,3]"
+                  value: 5.224609375
+                  timestamp: '2018-06-12 13:18:50.736000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.751200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '234'
+                - ID: ns=2;s=/Channel/Spindle/actSpeed
+                  source: opcua
+                  name: Spindle/actSpeed
+                  description: Spindle speed actual value
+                  path: "/Object/Sinumerik/Channel/Spindle/actSpeed"
+                  value: 12732.23876953125
+                  timestamp: '2018-06-12 13:18:50.837000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.856200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '215'
+                - ID: ns=2;s=/Channel/MachineAxis/aaLeadP[u1,1]
+                  source: opcua
+                  name: Axis/X/aaLeadP
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaLeadP[u1,1]"
+                  value: 81.78587028664185
+                  timestamp: '2018-06-12 13:18:50.837000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.856200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '220'
+                - ID: ns=2;s=/Channel/MachineAxis/aaLeadP[u1,3]
+                  source: opcua
+                  name: Axis/Z/aaLeadP
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaLeadP[u1,3]"
+                  value: 377.02183311701543
+                  timestamp: '2018-06-12 13:18:50.837000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.855200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '222'
+                - ID: ns=2;s=/Channel/MachineAxis/aaTorque[u1,1]
+                  source: opcua
+                  name: Axis/X/aaTorque
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaTorque[u1,1]"
+                  value: 0.854
+                  timestamp: '2018-06-12 13:18:50.837000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.855200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '223'
+                - ID: ns=2;s=/Channel/MachineAxis/aaTorque[u1,2]
+                  source: opcua
+                  name: Axis/Y/aaTorque
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaTorque[u1,2]"
+                  value: 0.501
+                  timestamp: '2018-06-12 13:18:50.837000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.855200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '224'
+                - ID: ns=2;s=/Channel/MachineAxis/aaTorque[u1,3]
+                  source: opcua
+                  name: Axis/Z/aaTorque
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaTorque[u1,3]"
+                  value: 4.0920000000000005
+                  timestamp: '2018-06-12 13:18:50.837000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.855200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '225'
+                - ID: ns=2;s=/Channel/MachineAxis/aaLoad[u1,1]
+                  source: opcua
+                  name: Axis/X/aaLoad
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaLoad[u1,1]"
+                  value: 6.65283203125
+                  timestamp: '2018-06-12 13:18:50.837000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.855200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '232'
+                - ID: ns=2;s=/Channel/Spindle/driveLoad
+                  source: opcua
+                  name: Spindle/driveLoad
+                  description: Load
+                  path: "/Object/Sinumerik/Channel/Spindle/driveLoad"
+                  value: 4.266357421875
+                  timestamp: '2018-06-12 13:18:50.837000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.856200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '217'
+                - ID: ns=2;s=/Channel/MachineAxis/aaLoad[u1,2]
+                  source: opcua
+                  name: Axis/Y/aaLoad
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaLoad[u1,2]"
+                  value: 3.509521484375
+                  timestamp: '2018-06-12 13:18:50.837000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.855200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '233'
+                - ID: ns=2;s=/Channel/MachineAxis/aaLoad[u1,3]
+                  source: opcua
+                  name: Axis/Z/aaLoad
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaLoad[u1,3]"
+                  value: 6.640625
+                  timestamp: '2018-06-12 13:18:50.837000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.855200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '234'
+                - ID: ns=2;s=/Channel/Spindle/driveLoad
+                  source: opcua
+                  name: Spindle/driveLoad
+                  description: Load
+                  path: "/Object/Sinumerik/Channel/Spindle/driveLoad"
+                  value: 4.6142578125
+                  timestamp: '2018-06-12 13:18:50.934000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.962200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '217'
+                - ID: ns=2;s=/Channel/MachineAxis/aaLeadP[u1,1]
+                  source: opcua
+                  name: Axis/X/aaLeadP
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaLeadP[u1,1]"
+                  value: 80.40307931462502
+                  timestamp: '2018-06-12 13:18:50.934000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.962200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '220'
+                - ID: ns=2;s=/Channel/MachineAxis/aaLeadP[u1,3]
+                  source: opcua
+                  name: Axis/Z/aaLeadP
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaLeadP[u1,3]"
+                  value: 376.9182301626505
+                  timestamp: '2018-06-12 13:18:50.934000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.962200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '222'
+                - ID: ns=2;s=/Channel/MachineAxis/aaTorque[u1,1]
+                  source: opcua
+                  name: Axis/X/aaTorque
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaTorque[u1,1]"
+                  value: 0.988
+                  timestamp: '2018-06-12 13:18:50.934000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.962200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '223'
+                - ID: ns=2;s=/Channel/MachineAxis/aaTorque[u1,2]
+                  source: opcua
+                  name: Axis/Y/aaTorque
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaTorque[u1,2]"
+                  value: 0.522
+                  timestamp: '2018-06-12 13:18:50.934000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.962200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '224'
+                - ID: ns=2;s=/Channel/Spindle/actSpeed
+                  source: opcua
+                  name: Spindle/actSpeed
+                  description: Spindle speed actual value
+                  path: "/Object/Sinumerik/Channel/Spindle/actSpeed"
+                  value: 12731.552124023438
+                  timestamp: '2018-06-12 13:18:50.934000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.962200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '215'
+                - ID: ns=2;s=/Channel/MachineAxis/aaLoad[u1,1]
+                  source: opcua
+                  name: Axis/X/aaLoad
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaLoad[u1,1]"
+                  value: 6.640625
+                  timestamp: '2018-06-12 13:18:50.934000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.961200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '232'
+                - ID: ns=2;s=/Channel/MachineAxis/aaLoad[u1,2]
+                  source: opcua
+                  name: Axis/Y/aaLoad
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaLoad[u1,2]"
+                  value: 3.759765625
+                  timestamp: '2018-06-12 13:18:50.934000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.961200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '233'
+                - ID: ns=2;s=/Channel/MachineAxis/aaLoad[u1,3]
+                  source: opcua
+                  name: Axis/Z/aaLoad
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaLoad[u1,3]"
+                  value: 6.109619140625
+                  timestamp: '2018-06-12 13:18:50.934000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.961200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '234'
+                - ID: ns=2;s=/Channel/MachineAxis/aaTorque[u1,3]
+                  source: opcua
+                  name: Axis/Z/aaTorque
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaTorque[u1,3]"
+                  value: 4.197
+                  timestamp: '2018-06-12 13:18:50.934000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:50.962200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '225'
+                - ID: ns=2;s=/Channel/ProgramPointer/blockNoStr
+                  source: opcua
+                  name: Program/blockNoStr
+                  description: Block number
+                  path: "/Object/Sinumerik/Channel/ProgramPointer/blockNoStr"
+                  value: N480
+                  timestamp: '2018-06-12 13:18:51.037000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:51.069200'
+                    VariantType: VariantType.String
+                    ClientHandle: '214'
+                - ID: ns=2;s=/Channel/Spindle/actSpeed
+                  source: opcua
+                  name: Spindle/actSpeed
+                  description: Spindle speed actual value
+                  path: "/Object/Sinumerik/Channel/Spindle/actSpeed"
+                  value: 12731.781005859375
+                  timestamp: '2018-06-12 13:18:51.037000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:51.069200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '215'
+                - ID: ns=2;s=/Channel/Spindle/driveLoad
+                  source: opcua
+                  name: Spindle/driveLoad
+                  description: Load
+                  path: "/Object/Sinumerik/Channel/Spindle/driveLoad"
+                  value: 4.302978515625
+                  timestamp: '2018-06-12 13:18:51.037000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:51.069200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '217'
+                - ID: ns=2;s=/Channel/MachineAxis/aaLeadP[u1,1]
+                  source: opcua
+                  name: Axis/X/aaLeadP
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaLeadP[u1,1]"
+                  value: 79.39611588733904
+                  timestamp: '2018-06-12 13:18:51.037000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:51.069200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '220'
+                - ID: ns=2;s=/Channel/MachineAxis/aaLeadP[u1,3]
+                  source: opcua
+                  name: Axis/Z/aaLeadP
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaLeadP[u1,3]"
+                  value: 376.84243901823214
+                  timestamp: '2018-06-12 13:18:51.037000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:51.069200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '222'
+                - ID: ns=2;s=/Channel/MachineAxis/aaTorque[u1,1]
+                  source: opcua
+                  name: Axis/X/aaTorque
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaTorque[u1,1]"
+                  value: -0.775
+                  timestamp: '2018-06-12 13:18:51.037000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:51.069200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '223'
+                - ID: ns=2;s=/Channel/MachineAxis/aaTorque[u1,2]
+                  source: opcua
+                  name: Axis/Y/aaTorque
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaTorque[u1,2]"
+                  value: 0.5660000000000001
+                  timestamp: '2018-06-12 13:18:51.037000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:51.069200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '224'
+                - ID: ns=2;s=/Channel/MachineAxis/aaTorque[u1,3]
+                  source: opcua
+                  name: Axis/Z/aaTorque
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaTorque[u1,3]"
+                  value: 4.42
+                  timestamp: '2018-06-12 13:18:51.037000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:18:51.069200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '225'
+            time: '2018-06-12T13:36:23.330+02:00'
+            attributes:
+              info: 3D Drucker Seite
+              modeltype: CPEE
+              theme: default
+              customer: pilotfabrik
+              status: development
+              artefact: '[ { "group": "Machines", "name": "MaxxMill500" }, { "group":
+                "Products", "name": "3D Drucker Seite" } ]'
+              sensor: '[ { "name": "MaxxMill500 Progress", "min": 0, "max": 200, "value":
+                "82", "type": "progress" } ]'
+          :done:
+            endpoint: https://centurio.work/data/mm500/queue/ee2afd67-4eaa-4b78-a50e-76fee7c8b48b/push
+            instance: https://centurio.work/flow/engine/376
+            label: Fetch
+            instance_name: 3D Drucker Seite
+            instance_uuid: 90052c58-b838-48ae-9a03-a7fd94d88555
+            activity: a1
+            time: '2018-06-12T13:36:23.432+02:00'
+            attributes:
+              info: 3D Drucker Seite
+              modeltype: CPEE
+              theme: default
+              customer: pilotfabrik
+              status: development
+              artefact: '[ { "group": "Machines", "name": "MaxxMill500" }, { "group":
+                "Products", "name": "3D Drucker Seite" } ]'
+              sensor: '[ { "name": "MaxxMill500 Progress", "min": 0, "max": 200, "value":
+                "83", "type": "progress" } ]'
+          :calling:
+            instance: https://centurio.work/flow/engine/376
+            instance_uuid: 90052c58-b838-48ae-9a03-a7fd94d88555
+            label: Fetch
+            instance_name: 3D Drucker Seite
+            activity: a1
+            passthrough: 
+            endpoint: https://centurio.work/data/mm500/queue/ee2afd67-4eaa-4b78-a50e-76fee7c8b48b/push
+            parameters:
+              label: Fetch
+              method: get
+              arguments: 
+            time: '2018-06-12T13:36:23.893+02:00'
+            attributes:
+              info: 3D Drucker Seite
+              modeltype: CPEE
+              theme: default
+              customer: pilotfabrik
+              status: development
+              artefact: '[ { "group": "Machines", "name": "MaxxMill500" }, { "group":
+                "Products", "name": "3D Drucker Seite" } ]'
+              sensor: '[ { "name": "MaxxMill500 Progress", "min": 0, "max": 200, "value":
+                "83", "type": "progress" } ]'
+        :dataelements:
+          :change:
+            endpoint: https://centurio.work/data/mm500/queue/ee2afd67-4eaa-4b78-a50e-76fee7c8b48b/push
+            label: Fetch
+            instance_name: 3D Drucker Seite
+            instance: https://centurio.work/flow/engine/376
+            instance_uuid: 90052c58-b838-48ae-9a03-a7fd94d88555
+            activity: a1
+            changed:
+            - steps
+            values:
+              instance: ee2afd67-4eaa-4b78-a50e-76fee7c8b48b
+              steps: 83
+              lets_continue: true
+            attributes:
+              info: 3D Drucker Seite
+              modeltype: CPEE
+              theme: default
+              customer: pilotfabrik
+              status: development
+              artefact: '[ { "group": "Machines", "name": "MaxxMill500" }, { "group":
+                "Products", "name": "3D Drucker Seite" } ]'
+              sensor: '[ { "name": "MaxxMill500 Progress", "min": 0, "max": 200, "value":
+                "83", "type": "progress" } ]'
+    :a3:
+      :robot:
+        :activity:
+          :calling:
+            instance: https://centurio.work/flow/engine/376
+            instance_uuid: 90052c58-b838-48ae-9a03-a7fd94d88555
+            label: Status
+            instance_name: 3D Drucker Seite
+            activity: a3
+            passthrough: 
+            endpoint: https://centurio.work/data/mm500/queue/ee2afd67-4eaa-4b78-a50e-76fee7c8b48b
+            parameters:
+              label: Status
+              method: get
+              arguments: 
+            time: '2018-06-12T13:36:23.588+02:00'
+            attributes:
+              info: 3D Drucker Seite
+              modeltype: CPEE
+              theme: default
+              customer: pilotfabrik
+              status: development
+              artefact: '[ { "group": "Machines", "name": "MaxxMill500" }, { "group":
+                "Products", "name": "3D Drucker Seite" } ]'
+              sensor: '[ { "name": "MaxxMill500 Progress", "min": 0, "max": 200, "value":
+                "83", "type": "progress" } ]'
+          :done:
+            endpoint: https://centurio.work/data/mm500/queue/ee2afd67-4eaa-4b78-a50e-76fee7c8b48b
+            instance: https://centurio.work/flow/engine/376
+            label: Status
+            instance_name: 3D Drucker Seite
+            instance_uuid: 90052c58-b838-48ae-9a03-a7fd94d88555
+            activity: a3
+            time: '2018-06-12T13:36:23.652+02:00'
+            attributes:
+              info: 3D Drucker Seite
+              modeltype: CPEE
+              theme: default
+              customer: pilotfabrik
+              status: development
+              artefact: '[ { "group": "Machines", "name": "MaxxMill500" }, { "group":
+                "Products", "name": "3D Drucker Seite" } ]'
+              sensor: '[ { "name": "MaxxMill500 Progress", "min": 0, "max": 200, "value":
+                "83", "type": "progress" } ]'
+          :receiving:
+            instance: https://centurio.work/flow/engine/376
+            label: Status
+            instance_name: 3D Drucker Seite
+            instance_uuid: 90052c58-b838-48ae-9a03-a7fd94d88555
+            activity: a3
+            endpoint: https://centurio.work/data/mm500/queue/ee2afd67-4eaa-4b78-a50e-76fee7c8b48b
+            received:
+            - text:
+                mimetype: text/plain
+                content: exists
+            time: '2018-06-12T13:36:23.610+02:00'
+            attributes:
+              info: 3D Drucker Seite
+              modeltype: CPEE
+              theme: default
+              customer: pilotfabrik
+              status: development
+              artefact: '[ { "group": "Machines", "name": "MaxxMill500" }, { "group":
+                "Products", "name": "3D Drucker Seite" } ]'
+              sensor: '[ { "name": "MaxxMill500 Progress", "min": 0, "max": 200, "value":
+                "83", "type": "progress" } ]'
+        :dataelements:
+          :change:
+            endpoint: https://centurio.work/data/mm500/queue/ee2afd67-4eaa-4b78-a50e-76fee7c8b48b
+            label: Status
+            instance_name: 3D Drucker Seite
+            instance: https://centurio.work/flow/engine/376
+            instance_uuid: 90052c58-b838-48ae-9a03-a7fd94d88555
+            activity: a3
+            changed:
+            - lets_continue
+            values:
+              instance: ee2afd67-4eaa-4b78-a50e-76fee7c8b48b
+              steps: 83
+              lets_continue: true
+            attributes:
+              info: 3D Drucker Seite
+              modeltype: CPEE
+              theme: default
+              customer: pilotfabrik
+              status: development
+              artefact: '[ { "group": "Machines", "name": "MaxxMill500" }, { "group":
+                "Products", "name": "3D Drucker Seite" } ]'
+              sensor: '[ { "name": "MaxxMill500 Progress", "min": 0, "max": 200, "value":
+                "83", "type": "progress" } ]'
+  58b9fdf1-f7a2-4754-b222-4c4d7f383583:
+    :a1:
+      :robot:
+        :activity:
+          :receiving:
+            instance: https://centurio.work/flow/engine/377
+            label: Fetch
+            instance_name: 3D Drucker Seite
+            instance_uuid: 58b9fdf1-f7a2-4754-b222-4c4d7f383583
+            activity: a1
+            endpoint: https://centurio.work/data/mm500/queue/12b7cc1d-ce5d-4d6c-9b38-8ca6e01f12d3/push
+            received:
+            - message:
+                mimetype: application/json
+                content:
+                - ID: ns=2;s=/Channel/ProgramInfo/actBlock
+                  source: opcua
+                  name: Program/actBlock
+                  description: Current part program block.
+                  path: "/Object/Sinumerik/Channel/ProgramInfo/actBlock"
+                  value: "N2340 G3 X17.293 Y-38.195 CR=1.435\r"
+                  timestamp: '2018-06-12 13:24:15.651000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:24:15.680200'
+                    VariantType: VariantType.String
+                    ClientHandle: '212'
+                - ID: ns=2;s=/Channel/MachineAxis/aaTorque[u1,1]
+                  source: opcua
+                  name: Axis/X/aaTorque
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaTorque[u1,1]"
+                  value: -1.576
+                  timestamp: '2018-06-12 13:24:15.651000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:24:15.680200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '223'
+                - ID: ns=2;s=/Channel/MachineAxis/aaTorque[u1,2]
+                  source: opcua
+                  name: Axis/Y/aaTorque
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaTorque[u1,2]"
+                  value: -2.6390000000000002
+                  timestamp: '2018-06-12 13:24:15.651000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:24:15.680200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '224'
+                - ID: ns=2;s=/Channel/MachineAxis/aaTorque[u1,3]
+                  source: opcua
+                  name: Axis/Z/aaTorque
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaTorque[u1,3]"
+                  value: 4.916
+                  timestamp: '2018-06-12 13:24:15.651000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:24:15.680200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '225'
+                - ID: ns=2;s=/Channel/MachineAxis/aaVactB[u1,1]
+                  source: opcua
+                  name: Axis/X/aaVactB
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaVactB[u1,1]"
+                  value: 755.5613450796352
+                  timestamp: '2018-06-12 13:24:15.651000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:24:15.680200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '226'
+                - ID: ns=2;s=/Channel/MachineAxis/aaLoad[u1,1]
+                  source: opcua
+                  name: Axis/X/aaLoad
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaLoad[u1,1]"
+                  value: 6.536865234375
+                  timestamp: '2018-06-12 13:24:15.651000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:24:15.680200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '232'
+                - ID: ns=2;s=/Channel/MachineAxis/aaLoad[u1,2]
+                  source: opcua
+                  name: Axis/Y/aaLoad
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaLoad[u1,2]"
+                  value: 20.599365234375
+                  timestamp: '2018-06-12 13:24:15.651000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:24:15.679200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '233'
+                - ID: ns=2;s=/Channel/MachineAxis/aaLoad[u1,3]
+                  source: opcua
+                  name: Axis/Z/aaLoad
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaLoad[u1,3]"
+                  value: 1.20849609375
+                  timestamp: '2018-06-12 13:24:15.651000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:24:15.679200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '234'
+                - ID: ns=2;s=/Channel/MachineAxis/aaVactB[u1,2]
+                  source: opcua
+                  name: Axis/Y/aaVactB
+                  description: ''
+                  path: "/Object/Sinumerik/Channel/MachineAxis/aaVactB[u1,2]"
+                  value: -2163.104548113223
+                  timestamp: '2018-06-12 13:24:15.651000'
+                  meta:
+                    StatusCode: Good
+                    ServerTimestamp: '2018-06-12 12:24:15.680200'
+                    VariantType: VariantType.Double
+                    ClientHandle: '227'
+            time: '2018-06-12T13:43:48.492+02:00'
+            attributes:
+              info: 3D Drucker Seite
+              modeltype: CPEE
+              theme: default
+              customer: pilotfabrik
+              status: development
+              artefact: '[ { "group": "Machines", "name": "MaxxMill500" }, { "group":
+                "Products", "name": "3D Drucker Seite" } ]'
+              sensor: '[ { "name": "MaxxMill500 Progress", "min": 0, "max": 200, "value":
+                "176", "type": "progress" } ]'
+          :done:
+            endpoint: https://centurio.work/data/mm500/queue/12b7cc1d-ce5d-4d6c-9b38-8ca6e01f12d3/push
+            instance: https://centurio.work/flow/engine/377
+            label: Fetch
+            instance_name: 3D Drucker Seite
+            instance_uuid: 58b9fdf1-f7a2-4754-b222-4c4d7f383583
+            activity: a1
+            time: '2018-06-12T13:43:48.557+02:00'
+            attributes:
+              info: 3D Drucker Seite
+              modeltype: CPEE
+              theme: default
+              customer: pilotfabrik
+              status: development
+              artefact: '[ { "group": "Machines", "name": "MaxxMill500" }, { "group":
+                "Products", "name": "3D Drucker Seite" } ]'
+              sensor: '[ { "name": "MaxxMill500 Progress", "min": 0, "max": 200, "value":
+                "177", "type": "progress" } ]'
+          :calling:
+            instance: https://centurio.work/flow/engine/377
+            instance_uuid: 58b9fdf1-f7a2-4754-b222-4c4d7f383583
+            label: Fetch
+            instance_name: 3D Drucker Seite
+            activity: a1
+            passthrough: 
+            endpoint: https://centurio.work/data/mm500/queue/12b7cc1d-ce5d-4d6c-9b38-8ca6e01f12d3/push
+            parameters:
+              label: Fetch
+              method: get
+              arguments: 
+            time: '2018-06-12T13:43:48.983+02:00'
+            attributes:
+              info: 3D Drucker Seite
+              modeltype: CPEE
+              theme: default
+              customer: pilotfabrik
+              status: development
+              artefact: '[ { "group": "Machines", "name": "MaxxMill500" }, { "group":
+                "Products", "name": "3D Drucker Seite" } ]'
+              sensor: '[ { "name": "MaxxMill500 Progress", "min": 0, "max": 200, "value":
+                "177", "type": "progress" } ]'
+        :dataelements:
+          :change:
+            endpoint: https://centurio.work/data/mm500/queue/12b7cc1d-ce5d-4d6c-9b38-8ca6e01f12d3/push
+            label: Fetch
+            instance_name: 3D Drucker Seite
+            instance: https://centurio.work/flow/engine/377
+            instance_uuid: 58b9fdf1-f7a2-4754-b222-4c4d7f383583
+            activity: a1
+            changed:
+            - steps
+            values:
+              instance: 12b7cc1d-ce5d-4d6c-9b38-8ca6e01f12d3
+              steps: 177
+              lets_continue: true
+            attributes:
+              info: 3D Drucker Seite
+              modeltype: CPEE
+              theme: default
+              customer: pilotfabrik
+              status: development
+              artefact: '[ { "group": "Machines", "name": "MaxxMill500" }, { "group":
+                "Products", "name": "3D Drucker Seite" } ]'
+              sensor: '[ { "name": "MaxxMill500 Progress", "min": 0, "max": 200, "value":
+                "177", "type": "progress" } ]'
+    :a3:
+      :robot:
+        :activity:
+          :calling:
+            instance: https://centurio.work/flow/engine/377
+            instance_uuid: 58b9fdf1-f7a2-4754-b222-4c4d7f383583
+            label: Status
+            instance_name: 3D Drucker Seite
+            activity: a3
+            passthrough: 
+            endpoint: https://centurio.work/data/mm500/queue/12b7cc1d-ce5d-4d6c-9b38-8ca6e01f12d3
+            parameters:
+              label: Status
+              method: get
+              arguments: 
+            time: '2018-06-12T13:43:48.690+02:00'
+            attributes:
+              info: 3D Drucker Seite
+              modeltype: CPEE
+              theme: default
+              customer: pilotfabrik
+              status: development
+              artefact: '[ { "group": "Machines", "name": "MaxxMill500" }, { "group":
+                "Products", "name": "3D Drucker Seite" } ]'
+              sensor: '[ { "name": "MaxxMill500 Progress", "min": 0, "max": 200, "value":
+                "177", "type": "progress" } ]'
+          :done:
+            endpoint: https://centurio.work/data/mm500/queue/12b7cc1d-ce5d-4d6c-9b38-8ca6e01f12d3
+            instance: https://centurio.work/flow/engine/377
+            label: Status
+            instance_name: 3D Drucker Seite
+            instance_uuid: 58b9fdf1-f7a2-4754-b222-4c4d7f383583
+            activity: a3
+            time: '2018-06-12T13:43:48.777+02:00'
+            attributes:
+              info: 3D Drucker Seite
+              modeltype: CPEE
+              theme: default
+              customer: pilotfabrik
+              status: development
+              artefact: '[ { "group": "Machines", "name": "MaxxMill500" }, { "group":
+                "Products", "name": "3D Drucker Seite" } ]'
+              sensor: '[ { "name": "MaxxMill500 Progress", "min": 0, "max": 200, "value":
+                "177", "type": "progress" } ]'
+          :receiving:
+            instance: https://centurio.work/flow/engine/377
+            label: Status
+            instance_name: 3D Drucker Seite
+            instance_uuid: 58b9fdf1-f7a2-4754-b222-4c4d7f383583
+            activity: a3
+            endpoint: https://centurio.work/data/mm500/queue/12b7cc1d-ce5d-4d6c-9b38-8ca6e01f12d3
+            received:
+            - text:
+                mimetype: text/plain
+                content: exists
+            time: '2018-06-12T13:43:48.775+02:00'
+            attributes:
+              info: 3D Drucker Seite
+              modeltype: CPEE
+              theme: default
+              customer: pilotfabrik
+              status: development
+              artefact: '[ { "group": "Machines", "name": "MaxxMill500" }, { "group":
+                "Products", "name": "3D Drucker Seite" } ]'
+              sensor: '[ { "name": "MaxxMill500 Progress", "min": 0, "max": 200, "value":
+                "177", "type": "progress" } ]'
+        :dataelements:
+          :change:
+            endpoint: https://centurio.work/data/mm500/queue/12b7cc1d-ce5d-4d6c-9b38-8ca6e01f12d3
+            label: Status
+            instance_name: 3D Drucker Seite
+            instance: https://centurio.work/flow/engine/377
+            instance_uuid: 58b9fdf1-f7a2-4754-b222-4c4d7f383583
+            activity: a3
+            changed:
+            - lets_continue
+            values:
+              instance: 12b7cc1d-ce5d-4d6c-9b38-8ca6e01f12d3
+              steps: 177
+              lets_continue: true
+            attributes:
+              info: 3D Drucker Seite
+              modeltype: CPEE
+              theme: default
+              customer: pilotfabrik
+              status: development
+              artefact: '[ { "group": "Machines", "name": "MaxxMill500" }, { "group":
+                "Products", "name": "3D Drucker Seite" } ]'
+              sensor: '[ { "name": "MaxxMill500 Progress", "min": 0, "max": 200, "value":
+                "177", "type": "progress" } ]'

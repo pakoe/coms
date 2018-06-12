@@ -1,0 +1,19 @@
+<declaration xmlns="http://riddl.org/ns/declaration/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <interface name="main">
+    <xi:include href="interface.xml"/>
+  </interface>
+  <interface name="notifications">
+    <xi:include href="http://www.riddl.org/ns/common-patterns/notifications-consumer/1.0/consumer.xml"/>
+  </interface>
+
+  <facade>
+    <tile>
+      <layer name="main"/>
+      <layer name="notifications">
+        <apply-to>/events/engine</apply-to>
+        <apply-to>/events/worklist</apply-to>
+        <apply-to>/</apply-to>
+      </layer>
+    </tile>
+  </facade>
+</declaration>

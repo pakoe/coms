@@ -1,0 +1,5 @@
+- :cpee_stop
+- :method : 'put'
+  :url : ["engine > activity > calling > instance", "/properties/values/state"]
+  :data :
+    value : "stopping"

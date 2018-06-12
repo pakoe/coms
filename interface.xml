@@ -1,0 +1,15 @@
+<description xmlns="http://riddl.org/ns/description/1.0" xmlns:ann="http://riddl.org/ns/annotation/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <message name="violation">
+    <parameter name="res" type="string"/>
+  </message>
+  <message name="xml">
+    <parameter name="return" mimetype="text/xml"/>
+  </message>
+
+  <resource>
+    <get in="*" out="xml"/>
+    <resource> <!-- instance -->
+      <get out="xml"/>
+    </resource>
+  </resource>
+</description>

@@ -1,0 +1,13 @@
+id: 1
+process: "Linear"
+match:
+  - :a :
+    - [ "robot   > activity     > done  > endpoint", "==", "https://centurio.work/data/mm500/signals/"]
+condition:
+  - [ "a > robot   > activity     > receiving > received > message > content > pac52_65 > value", "avg", "Power"]
+# - [ "instance name", "instance", 3]
+if:    [] #was wenn
+ifnot: [] #was wenn nicht
+
+#conditions are only applied when the match matches
+# isc when evaluation only when pattern matches? ISC's total useless unless for last task

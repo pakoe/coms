@@ -1,0 +1,11 @@
+- :worklist_task_giveback
+- :method : 'put'
+  :url : ["worklist > task > add > wl_instance", '/', "worklist > user > take > user", '/tasks/', "worklist > task > add > callback_id"]
+  :data :
+    operation: "giveback"
+
+#OTHER options for tasks
+#assign url/tasks/callbackid?userid=...
+#giveback/assign url/user/tasks/callbackid data:operation=giveback
+# cpee_activity start (restart => stop, start)
+# cpee restart instance (stop, set position a1, start)

@@ -1,0 +1,20 @@
+#!/usr/bin/ruby
+require 'pp'
+require 'riddl/server'
+require 'xml/smart'
+require 'singleton'
+require 'yaml'
+require 'json'
+require 'deep_merge'
+require 'date'
+require 'yaml/store'
+
+require_relative 'lib/event'
+
+Riddl::Server.new(::File.dirname(__FILE__) + '/coms.xml', :host => "coms.wst.univie.ac.at", :port => 9201) do
+  accessible_description true
+  cross_site_xhr true
+  interface 'notifications' do
+    run Event if post "event"
+  end
+end.loop!

@@ -1,0 +1,31 @@
+type: map
+mapping:
+  "id":
+    type: int
+    required: yes
+  "process":
+    type: str
+    required: yes
+  "match":
+    type: seq
+    sequence:
+      - type: map
+        mapping:
+          str:
+            type: seq
+            sequence:
+              - type: str
+  "condition":
+     type: seq
+     sequence:
+       - type: seq
+         sequence:
+           - type: any
+  "if":
+    type: seq
+    sequence:
+        - type: str
+  "ifnot":
+    type: seq
+    sequence:
+      - type: str
