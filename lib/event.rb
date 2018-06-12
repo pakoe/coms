@@ -25,30 +25,31 @@ class Event < Riddl::Implementation
         data[uuid][activity_id][:worklist][@p.value("topic").to_sym][@p.value("event").to_sym] = ra
         check(data,[uuid,activity_id])
       else 'robot'
-        pp topic
-        pp event
         activity_id = ra['activity'].to_sym
-        pp data.dig([uuid],[activity_id],[:robot],[topic.to_sym],[event.to_sym],['received'],['message'],['content'],[elem['ID']])
         #only for Proof of concept
-          unless ra['received'].nil?
-            unless ra['received'][0].nil?
-              unless ra['received'][0]['message'].nil?
-                unless ra['received'][0]['message']['content'].nil?
-                  ra['received'][0]['message']['content'].each{ |elem|
-                    pp data[uuid][activity_id][:robot][topic.to_sym][event.to_sym][k]
-                    pp data[uuid][activity_id][:robot][topic.to_sym][event.to_sym][k].length
-                    data[uuid][activity_id][:robot][topic.to_sym][event.to_sym]['received']['message']['content'][elem['ID']] = elem
-                 }
-               end
+        ra.each do |k,v|
+          if v.kind_of?(Array)
+            pp 'is array'
+            pp v
+            #pp v[0]&.[]('message')&.[]('content')
+            unless v[0]&.[]('message')&.[]('content').nil?
+              v[0]['message']['content'].each{ |elem|
+                data[uuid][activity_id][:robot][topic.to_sym][event.to_sym]['received']['message']['content'][elem['ID']] = elem
+              }
+            else
+              data[uuid][activity_id][:robot][topic.to_sym][event.to_sym][k] = v
             end
+          else
+            data[uuid][activity_id][:robot][topic.to_sym][event.to_sym][k] = v
           end
         end
       end
 
-      #check(data,[uuid,activity_id])
+      check(data,[uuid,activity_id])
 
       store = YAML::Store.new "resources/state_save.yml"
       store.transaction do
+        #pp data
         store[:data] = data
       end
     end
