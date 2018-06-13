@@ -29,9 +29,6 @@ class Event < Riddl::Implementation
         #only for Proof of concept
         ra.each do |k,v|
           if v.kind_of?(Array)
-            pp 'is array'
-            pp v
-            #pp v[0]&.[]('message')&.[]('content')
             unless v[0]&.[]('message')&.[]('content').nil?
               v[0]['message']['content'].each{ |elem|
                 data[uuid][activity_id][:robot][topic.to_sym][event.to_sym]['received']['message']['content'][elem['ID']] = elem
@@ -62,8 +59,6 @@ def check(data,current)
   #match = [ruleid,symbol,match position]
   match        = match_current(data,rules,current)
 
-  pp "match"
-  pp match
   unless match.nil? then
     #get only matched rules, TODO Problem? if id and proces info more then once!
     rule = rules.select{|r| (r['id'] == match[0]) }
@@ -73,14 +68,10 @@ def check(data,current)
     #check sequence
     check_structure(data,current,match,match_cache,rule)
   end
-    pp "match cache"
-    pp match_cache
 end
 
 def check_condition(data,current,match,match_cache,rules)
   rules.each{ |r|
-    # filtering for symbol :a == :a
-    # TODO have to do the parsing twice for c[0]
     app_conditions = r["condition"].select{|c| parse_path(c[0],0,3)[0] == match[1]}
     #make an entry for every condition into match_cache
     if match_cache[r['process']][match[0]][current[0]][match[1]][current[1]].empty? then
@@ -91,32 +82,19 @@ def check_condition(data,current,match,match_cache,rules)
       if is_reference?(ar.last) then
 
         symbo = parse_path(ar.last)[0]
-        pp "parse_path"
-        pp symbo
-        pp "current"
-        pp current
-        pp "match_cache"
-        pp match_cache
         newcurr = []
         newcurr.replace(current)
         if symbo != current[1] then
-          pp "adapted current"
           newcurr[1]=match_cache[r['process']][match[0]][current[0]][symbo].keys[0]
         end
         cond = data.dig(*newcurr).dig(*parse_path(ar.last)[1..-1])
-        pp "cond"
-        pp cond
+
       else
         cond = ar.last
       end
       #from here if path
       path = parse_path(ar[0])[1..-1].map{|pa| pa = try_int(pa)}
-      pp "current2"
-      pp current
-      pp "path"
-      pp path
       search = data.dig(*current)
-      pp search
       path.chunk{|p| p=='*'||p==:*}.each{|k,v|
         if k then
           product, bottom = {},[]
@@ -126,11 +104,7 @@ def check_condition(data,current,match,match_cache,rules)
           search = search.dig(*v)
         end
       }
-      pp "lefthandside"
-      pp search
-
       # from here if not / else
-
       unless search.nil? || search.empty? then
         #search = try_numerical(search)
         begin search.extend(ConditionMethods) rescue pp "cannot extend, shit is immediate" end
@@ -194,7 +168,6 @@ module ConditionMethods
 end
 
 def check_structure(data,current,match,match_cache,rules)
-  pp match
   rules.each do |r|
     if match[2] == (r['match'].size)-1 then
       order = []
@@ -239,8 +212,7 @@ end
 #only match in instance and activity of current event
 def match_current(data,rules,current)
       rules.each{ |r|
-        #TODO in bereits erledigten nicht mehr schauen?
-      #  if data[current[0]][:info] == r['process'] then
+
           r['match'].each_with_index{|mr,i|
             mr.each{|symbol,v|
               m = 0
@@ -252,7 +224,6 @@ def match_current(data,rules,current)
               if m == v.size then return [r['id'],symbol,i] end
             }
           }
-      #  end
       }
       nil
 end

@@ -1,0 +1,14 @@
+match:
+  - :a :
+    - [  "blackboard > event", "==", "changed" ]
+condition:
+  - [ "a > blackboard > values > last_value",
+      "<",
+      "a > blackboard > values > average_low"
+    ]
+  - [ "a > blackboard > values > last_value",
+      ">",
+      "a > blackboard > values > average_high"
+    ]
+if:    [engine_stop]
+ifnot: [calculate_average]

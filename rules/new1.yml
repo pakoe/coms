@@ -2,12 +2,19 @@ id: 1
 process: "Linear"
 match:
   - :a :
-    - [ "robot   > activity     > done  > endpoint", "==", "https://centurio.work/data/mm500/signals/"]
+    - [ "engine > activity > done  > endpoint", "==", "https://centurio.work/data/mm500/signals/"],
+    - [ "engine > source",                      "==", "MaxxMill 500"]
 condition:
-  - [ "a > robot   > activity     > receiving > received > message > content > pac52_65 > value", "avg", "Power"]
-# - [ "instance name", "instance", 3]
-if:    [] #was wenn
-ifnot: [] #was wenn nicht
+  - [ "a > engine > activity > receiving > received > message > content > pac52_65 > value",
+     "exits?"
+    ]
+if:    [blackboardize_power_value]
+ifnot: []
 
-#conditions are only applied when the match matches
-# isc when evaluation only when pattern matches? ISC's total useless unless for last task
+def blackboardize_power_value(context)
+  value = context.a.robot.activity.receiving.received.message.content.pac52_65.value
+  # context.a.* ... access current event in current instance
+  # context.a.blackboard ... access shared datastore in the current instance
+  # context.blackboard ... access global datastore, shared by all instances/data sources
+  context.blackboard.values.last_value = value
+end

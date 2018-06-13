@@ -1,0 +1,30 @@
+id: 1
+process: "Linear"
+match:
+  - :a :
+    - [  "blackboard > event", "==", "changed" ]
+condition:
+  - [ "a > blackboard > values > last_value",
+      "<",
+      "a " > blackboard > values > average_low"
+    ]
+  - [ "a > blackboard > values > last_value",
+      ">",
+      "a " > blackboard > values > average_high"
+    ]
+if:    [engine_stop]
+ifnot: [calculate_average]
+
+def calculate_average(context)
+  context.blackboard.values.average =
+    (
+      context.blackboard.values.average *
+      context.blackboard.values.average_count +
+      context.blackboard.values.last_value
+    ) / (
+      context.blackboard.values.average_count + 1
+    )
+  context.blackboard.values.average_count += 1
+  context.blackboard.values.average_low = context.blackboard.values.average - 10 # 10 watts less
+  context.blackboard.values.average_high = context.blackboard.values.average + 10 # 10 watts more
+end

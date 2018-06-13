@@ -1,0 +1,10 @@
+match:
+  - :a :
+    - [ "engine > activity > done  > endpoint", "==", "https://centurio.work/data/mm500/signals/"],
+    - [ "engine > source",                      "==", "MaxxMill 500"]
+condition:
+  - [ "a > engine > activity > receiving > received > message > content > pac52_65 > value",
+     "exits?"
+    ]
+if:    [blackboardize_power_value]
+ifnot: []
